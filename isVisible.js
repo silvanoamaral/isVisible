@@ -1,8 +1,8 @@
 function isVisible() {
-       var nomeElemento = 'footer';
+    var nomeElement = 'footer';
     var elem = document.querySelector(nomeElemento);
   
-    if (!(elem instanceof Element)) throw Error('DomUtil: elem is not an element.');
+    if (!(elem instanceof Element)) throw Error('elem is not an element.');
     var style = getComputedStyle(elem);
     if (style.display === 'none') return false;
     if (style.visibility !== 'visible') return false;
@@ -21,12 +21,12 @@ function isVisible() {
         if (pointContainer === elem) return true;
     } while (pointContainer = pointContainer.parentNode);
     return false;
-  }
+}
 
-   window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
     if(isVisible()) {
       $('.grid.product__infos.grid__col--sm-6').css('bottom','90px');
     } else {
       $('.grid.product__infos.grid__col--sm-6').css('bottom','0px');
     }
-  });
+});
