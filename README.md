@@ -1,2 +1,2 @@
 # isVisible
-Verifica se elemento está visivel na página
+Verificar se uma div está visivel
